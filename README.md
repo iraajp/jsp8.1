@@ -5,16 +5,19 @@ This program demonstrates JSP implicit objects by displaying the current date an
 ## How to run
 
 1. Install dependencies:
+
 ```bash
 npm install
 ```
 
 2. Start the server:
+
 ```bash
 npm start
 ```
 
 3. Open in browser:
+
 ```
 http://localhost:3003/
 ```
