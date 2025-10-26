@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Date - Practical 8.1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: white;
+        }
+        h2 {
+            color: #333;
+        }
+        .date-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px 0;
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h2>Practical 8.1: Display Current Date and Time</h2>
+    
+    <div class="date-box">
+        <strong>Current Date/Time:</strong>
+        <p id="dateOutput"></p>
+    </div>
+    
+    <div class="date-box">
+        <strong>GMT String:</strong>
+        <p id="gmtOutput"></p>
+    </div>
+
+    <script>
+        // Fetch date from server
+        fetch('/api/date')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dateOutput').textContent = data.date;
+                document.getElementById('gmtOutput').textContent = data.gmt;
+            });
+    </script>
+</body>
+</html>
